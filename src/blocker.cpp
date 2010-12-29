@@ -67,8 +67,8 @@ void print_layers(Binvox&, std::ostream*);
 void optimize_xz_layer(int layer, Binvox&, Stones&);
 
 int main (int argc, char** argv) {
-	int* stone_count = {17500,12500,5000,3000};
-	int* stone_length = {4,2,3,1};
+	int stone_count[4] = {17500,12500,5000,3000};
+	int stone_length[4] = {4,2,3,1};
 	Stones stones (stone_length,stone_count,4);
 	Binvox b = read_binvox("Apple.binvox");
 	for (int i =0; i < b.dimy; ++i) {
